@@ -22,7 +22,7 @@ jobs:
         run: ./gradlew assembleDebug
 
       - name: Upload and Distribute App
-        uses: mitesh-patel-1211/AndroidCICD.github/workflows@master
+        uses: mitesh-patel-1211/AndroidCICD.github.workflows@master
         with:
           serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
           appId: ${{ secrets.FIREBASE_APP_ID }}
