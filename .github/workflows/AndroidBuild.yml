@@ -19,7 +19,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Upload and Distribute App
-        uses: mastersam07/firebase-app-distribution-action@v0.1
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.5.1
         with:
             serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
             appId: ${{ secrets.FIREBASE_APP_ID }}
