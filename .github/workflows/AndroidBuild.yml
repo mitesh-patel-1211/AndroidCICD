@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-java@v4.2.1
         with:
           java-version: '17'
-          distribution: 'adopt'
+          distribution: 'temurin'
 
       - name: Upload and Distribute App
         uses: mastersam07/firebase-app-distribution-action@v0.1
