@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "874582596534",
+    "project_id": "randomvideocall-64fe5",
+    "storage_bucket": "randomvideocall-64fe5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874582596534:android:27e2d2d225662becddbf17",
+        "android_client_info": {
+          "package_name": "com.example.androidcicd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbP_sdo5187t5txGvZSosYDgIaNHRh-ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874582596534:android:7a6fa273d59b1ffcddbf17",
+        "android_client_info": {
+          "package_name": "com.livetalk.livevideocall.random.talk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbP_sdo5187t5txGvZSosYDgIaNHRh-ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
