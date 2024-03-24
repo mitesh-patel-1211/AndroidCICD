@@ -27,7 +27,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Build APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleRelease
 
       - name: Upload and Distribute App
         uses: google/firebase-app-distribution
