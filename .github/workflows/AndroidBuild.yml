@@ -32,7 +32,8 @@ jobs:
       - name: Upload and Distribute App
         uses: google/firebase-app-distribution
         with:
-            serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
-            appId: ${{ secrets.FIREBASE_APP_ID }}
-            file: app/build/outputs/apk/release/app-release.apk
-            groups: 'testers'
+          serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
+          appId: ${{ secrets.FIREBASE_APP_ID }}
+          file: app/build/outputs/apk/release/app-release.apk
+          groups: 'testers'
+`
