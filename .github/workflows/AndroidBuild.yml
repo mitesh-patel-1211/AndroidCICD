@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew assembleDebug
 
       - name: Upload and Distribute App
-        uses: google/login@v5
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
             serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
             appId: ${{ secrets.FIREBASE_APP_ID }}
