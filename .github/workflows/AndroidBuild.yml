@@ -20,3 +20,11 @@ jobs:
 
       - name: Build APK
         run: ./gradlew assembleDebug
+
+      - name: Upload and Distribute App
+        uses: google/login@v5
+        with:
+          serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
+          appId: ${{ secrets.FIREBASE_APP_ID }}
+          file: app/build/outputs/apk/release/app-release.apk
+          groups: 'testers'
