@@ -18,10 +18,13 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Build APK
+        run: ./gradlew assembleDebug
+
       - name: Upload and Distribute App
-        uses: mastersam07/firebase-app-distribution-action@v0.1
+        uses: google/firebase-app-distribution@v2
         with:
             serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
             appId: ${{ secrets.FIREBASE_APP_ID }}
-            file: app/build/outputs/apk/release/app-release.apk
+            file: app/build/outputs/apk/debug/app-debug.apk
             groups: 'testers'
