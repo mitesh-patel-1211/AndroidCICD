@@ -22,7 +22,9 @@ jobs:
         run: ./gradlew assembleRelease
 
       - name: Upload and Distribute App
-        run: |
-          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > key.json
-          firebase appdistribution:release app/build/outputs/apk/release/app-release.apk --app ${{ secrets.FIREBASE_APP_ID }} --token "$(firebase login:ci --no-localhost --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }})"
-          rm ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
+        uses: mitesh-patel-1211/AndroidCICD@master
+        with:
+          serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
+          appId: ${{ secrets.FIREBASE_APP_ID }}
+          file: app/build/outputs/apk/release/app-release.apk
+          groups: 'testers'
